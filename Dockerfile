@@ -1,4 +1,4 @@
-FROM jupyter/r-notebook
+FROM ghcr.io/msd-live/jupyter/r-notebook:latest
 
 USER root
 
