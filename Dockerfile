@@ -5,3 +5,5 @@ USER root
 RUN git clone --branch master https://github.com/JGCRI/hector.git hector
 
 RUN R -e 'library("devtools"); devtools::install("/home/jovyan/hector")'
+
+COPY notebooks /home/jovyan/notebooks
