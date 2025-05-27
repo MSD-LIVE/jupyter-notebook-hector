@@ -11,8 +11,9 @@ RUN git clone --branch main https://github.com/JGCRI/hector.git /home/jovyan/hec
 RUN R -e 'install.packages("devtools", repos="https://cloud.r-project.org")'
 RUN R -e 'library("devtools"); devtools::install("/home/jovyan/hector")'
 
-# Switch back to the non-root 'jovyan' user for better security
-USER jovyan
+# DO NOT switch back to the non-root 'jovyan' user or else the notebook won't be able
+# to switch to the correct user
+# USER jovyan
 
 # Set the working directory to the jovyan home directory
 WORKDIR /home/jovyan/
